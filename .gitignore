@@ -1,0 +1,8 @@
+.snakemake
+out
+log
+log.txt*
+*.swp
+# config.yaml
+seq
+src

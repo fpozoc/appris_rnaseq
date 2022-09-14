@@ -1,0 +1,872 @@
+annotations:
+  GRCh38:
+    g27:
+      enabled: false
+      url: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_27/gencode.v27.primary_assembly.annotation.gtf.gz
+    g28:
+      enabled: false
+      url: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_28/gencode.v28.primary_assembly.annotation.gtf.gz
+    g29:
+      enabled: false
+      url: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_29/gencode.v29.primary_assembly.annotation.gtf.gz
+    g30:
+      enabled: false
+      url: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_30/gencode.v30.primary_assembly.annotation.gtf.gz
+    g31:
+      enabled: false
+      url: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_31/gencode.v31.primary_assembly.annotation.gtf.gz
+    g32:
+      enabled: false
+      url: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_32/gencode.v32.primary_assembly.annotation.gtf.gz
+    g33:
+      enabled: false
+      url: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_33/gencode.v33.primary_assembly.annotation.gtf.gz
+    g34:
+      enabled: false
+      url: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_34/gencode.v34.primary_assembly.annotation.gtf.gz
+    g35:
+      enabled: false
+      url: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_35/gencode.v35.primary_assembly.annotation.gtf.gz
+    g36:
+      enabled: false
+      url: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_36/gencode.v36.primary_assembly.annotation.gtf.gz
+    g37:
+      enabled: false
+      url: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_37/gencode.v37.primary_assembly.annotation.gtf.gz
+    g38:
+      enabled: false
+      url: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_38/gencode.v38.primary_assembly.annotation.gtf.gz
+    g39:
+      enabled: false
+      url: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_39/gencode.v39.primary_assembly.annotation.gtf.gz
+    g40:
+      enabled: false
+      url: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_40/gencode.v40.primary_assembly.annotation.gtf.gz
+    g41:
+      enabled: false
+      url: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_41/gencode.v41.primary_assembly.annotation.gtf.gz
+    rs109:
+      enabled: false
+      url: ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.39_GRCh38.p13/GRCh38_major_release_seqs_for_alignment_pipelines/GCA_000001405.15_GRCh38_full_analysis_set.refseq_annotation.gtf.gz
+    rs110:
+      enabled: false
+      url: ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.40_GRCh38.p14/GRCh38_major_release_seqs_for_alignment_pipelines/GCA_000001405.15_GRCh38_full_analysis_set.refseq_annotation.gtf.gz
+  GRCh37:
+    rs105:
+      enabled: true
+      url: https://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/GRCh37_latest/refseq_identifiers/GRCh37_latest_genomic.gtf.gz 
+    g19:
+      enabled: false
+      url: ftp://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_19/gencode.v19.annotation.gtf.gz
+genomes: # Reference: https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use
+  GRCh38:
+    url: https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.40_GRCh38.p14/GRCh38_major_release_seqs_for_alignment_pipelines/GCA_000001405.15_GRCh38_full_analysis_set.fna.gz
+  GRCh37:
+    # change for GENCODE 19
+    #     url: https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.25_GRCh37.p13/GRCh37_seqs_for_alignment_pipelines/GCA_000001405.14_GRCh37.p13_no_alt_analysis_set.fna.gz
+    url: https://ftp.ncbi.nlm.nih.gov/refseq/H_sapiens/annotation/GRCh37_latest/refseq_identifiers/GRCh37_latest_genomic.fna.gz
+params:
+    cutadapt_pe: "-m 20 -a AGATCGGAAGAGC -A AGATCGGAAGAGC"
+    STAR: "--outFilterMultimapNmax 50 --winAnchorMultimapNmax 50 --alignEndsType EndToEnd --readFilesCommand gunzip -c --outSAMtype BAM Unsorted"
+samples:
+     E-MTAB-2836:
+         ERR315325:
+             "1":
+                 r1: ERR315325_1.fastq.gz
+                 r2: ERR315325_2.fastq.gz
+         ERR315326:
+             "1":
+                 r1: ERR315326_1.fastq.gz
+                 r2: ERR315326_2.fastq.gz
+         ERR315327:
+             "1":
+                 r1: ERR315327_1.fastq.gz
+                 r2: ERR315327_2.fastq.gz
+         ERR315328:
+             "1":
+                 r1: ERR315328_1.fastq.gz
+                 r2: ERR315328_2.fastq.gz
+         ERR315329:
+             "1":
+                 r1: ERR315329_1.fastq.gz
+                 r2: ERR315329_2.fastq.gz
+         ERR315330:
+             "1":
+                 r1: ERR315330_1.fastq.gz
+                 r2: ERR315330_2.fastq.gz
+         ERR315331:
+             "1":
+                 r1: ERR315331_1.fastq.gz
+                 r2: ERR315331_2.fastq.gz
+         ERR315332:
+             "1":
+                 r1: ERR315332_1.fastq.gz
+                 r2: ERR315332_2.fastq.gz
+         ERR315333:
+             "1":
+                 r1: ERR315333_1.fastq.gz
+                 r2: ERR315333_2.fastq.gz
+         ERR315334:
+             "1":
+                 r1: ERR315334_1.fastq.gz
+                 r2: ERR315334_2.fastq.gz
+         ERR315335:
+             "1":
+                 r1: ERR315335_1.fastq.gz
+                 r2: ERR315335_2.fastq.gz
+         ERR315336:
+             "1":
+                 r1: ERR315336_1.fastq.gz
+                 r2: ERR315336_2.fastq.gz
+         ERR315337:
+             "1":
+                 r1: ERR315337_1.fastq.gz
+                 r2: ERR315337_2.fastq.gz
+         ERR315338:
+             "1":
+                 r1: ERR315338_1.fastq.gz
+                 r2: ERR315338_2.fastq.gz
+         ERR315339:
+             "1":
+                 r1: ERR315339_1.fastq.gz
+                 r2: ERR315339_2.fastq.gz
+         ERR315340:
+             "1":
+                 r1: ERR315340_1.fastq.gz
+                 r2: ERR315340_2.fastq.gz
+         ERR315341:
+             "1":
+                 r1: ERR315341_1.fastq.gz
+                 r2: ERR315341_2.fastq.gz
+         ERR315342:
+             "1":
+                 r1: ERR315342_1.fastq.gz
+                 r2: ERR315342_2.fastq.gz
+         ERR315343:
+             "1":
+                 r1: ERR315343_1.fastq.gz
+                 r2: ERR315343_2.fastq.gz
+         ERR315344:
+             "1":
+                 r1: ERR315344_1.fastq.gz
+                 r2: ERR315344_2.fastq.gz
+         ERR315345:
+             "1":
+                 r1: ERR315345_1.fastq.gz
+                 r2: ERR315345_2.fastq.gz
+         ERR315346:
+             "1":
+                 r1: ERR315346_1.fastq.gz
+                 r2: ERR315346_2.fastq.gz
+         ERR315347:
+             "1":
+                 r1: ERR315347_1.fastq.gz
+                 r2: ERR315347_2.fastq.gz
+         ERR315348:
+             "1":
+                 r1: ERR315348_1.fastq.gz
+                 r2: ERR315348_2.fastq.gz
+         ERR315349:
+             "1":
+                 r1: ERR315349_1.fastq.gz
+                 r2: ERR315349_2.fastq.gz
+         ERR315350:
+             "1":
+                 r1: ERR315350_1.fastq.gz
+                 r2: ERR315350_2.fastq.gz
+         ERR315351:
+             "1":
+                 r1: ERR315351_1.fastq.gz
+                 r2: ERR315351_2.fastq.gz
+         ERR315352:
+             "1":
+                 r1: ERR315352_1.fastq.gz
+                 r2: ERR315352_2.fastq.gz
+         ERR315353:
+             "1":
+                 r1: ERR315353_1.fastq.gz
+                 r2: ERR315353_2.fastq.gz
+         ERR315354:
+             "1":
+                 r1: ERR315354_1.fastq.gz
+                 r2: ERR315354_2.fastq.gz
+         ERR315355:
+             "1":
+                 r1: ERR315355_1.fastq.gz
+                 r2: ERR315355_2.fastq.gz
+         ERR315356:
+             "1":
+                 r1: ERR315356_1.fastq.gz
+                 r2: ERR315356_2.fastq.gz
+         ERR315357:
+             "1":
+                 r1: ERR315357_1.fastq.gz
+                 r2: ERR315357_2.fastq.gz
+         ERR315358:
+             "1":
+                 r1: ERR315358_1.fastq.gz
+                 r2: ERR315358_2.fastq.gz
+         ERR315359:
+             "1":
+                 r1: ERR315359_1.fastq.gz
+                 r2: ERR315359_2.fastq.gz
+         ERR315360:
+             "1":
+                 r1: ERR315360_1.fastq.gz
+                 r2: ERR315360_2.fastq.gz
+         ERR315361:
+             "1":
+                 r1: ERR315361_1.fastq.gz
+                 r2: ERR315361_2.fastq.gz
+         ERR315362:
+             "1":
+                 r1: ERR315362_1.fastq.gz
+                 r2: ERR315362_2.fastq.gz
+         ERR315363:
+             "1":
+                 r1: ERR315363_1.fastq.gz
+                 r2: ERR315363_2.fastq.gz
+         ERR315364:
+             "1":
+                 r1: ERR315364_1.fastq.gz
+                 r2: ERR315364_2.fastq.gz
+         ERR315365:
+             "1":
+                 r1: ERR315365_1.fastq.gz
+                 r2: ERR315365_2.fastq.gz
+         ERR315366:
+             "1":
+                 r1: ERR315366_1.fastq.gz
+                 r2: ERR315366_2.fastq.gz
+         ERR315367:
+             "1":
+                 r1: ERR315367_1.fastq.gz
+                 r2: ERR315367_2.fastq.gz
+         ERR315368:
+             "1":
+                 r1: ERR315368_1.fastq.gz
+                 r2: ERR315368_2.fastq.gz
+         ERR315369:
+             "1":
+                 r1: ERR315369_1.fastq.gz
+                 r2: ERR315369_2.fastq.gz
+         ERR315370:
+             "1":
+                 r1: ERR315370_1.fastq.gz
+                 r2: ERR315370_2.fastq.gz
+         ERR315371:
+             "1":
+                 r1: ERR315371_1.fastq.gz
+                 r2: ERR315371_2.fastq.gz
+         ERR315372:
+             "1":
+                 r1: ERR315372_1.fastq.gz
+                 r2: ERR315372_2.fastq.gz
+         ERR315373:
+             "1":
+                 r1: ERR315373_1.fastq.gz
+                 r2: ERR315373_2.fastq.gz
+         ERR315374:
+             "1":
+                 r1: ERR315374_1.fastq.gz
+                 r2: ERR315374_2.fastq.gz
+         ERR315375:
+             "1":
+                 r1: ERR315375_1.fastq.gz
+                 r2: ERR315375_2.fastq.gz
+         ERR315376:
+             "1":
+                 r1: ERR315376_1.fastq.gz
+                 r2: ERR315376_2.fastq.gz
+         ERR315377:
+             "1":
+                 r1: ERR315377_1.fastq.gz
+                 r2: ERR315377_2.fastq.gz
+         ERR315378:
+             "1":
+                 r1: ERR315378_1.fastq.gz
+                 r2: ERR315378_2.fastq.gz
+         ERR315379:
+             "1":
+                 r1: ERR315379_1.fastq.gz
+                 r2: ERR315379_2.fastq.gz
+         ERR315380:
+             "1":
+                 r1: ERR315380_1.fastq.gz
+                 r2: ERR315380_2.fastq.gz
+         ERR315381:
+             "1":
+                 r1: ERR315381_1.fastq.gz
+                 r2: ERR315381_2.fastq.gz
+         ERR315382:
+             "1":
+                 r1: ERR315382_1.fastq.gz
+                 r2: ERR315382_2.fastq.gz
+         ERR315383:
+             "1":
+                 r1: ERR315383_1.fastq.gz
+                 r2: ERR315383_2.fastq.gz
+         ERR315384:
+             "1":
+                 r1: ERR315384_1.fastq.gz
+                 r2: ERR315384_2.fastq.gz
+         ERR315385:
+             "1":
+                 r1: ERR315385_1.fastq.gz
+                 r2: ERR315385_2.fastq.gz
+         ERR315386:
+             "1":
+                 r1: ERR315386_1.fastq.gz
+                 r2: ERR315386_2.fastq.gz
+         ERR315387:
+             "1":
+                 r1: ERR315387_1.fastq.gz
+                 r2: ERR315387_2.fastq.gz
+         ERR315388:
+             "1":
+                 r1: ERR315388_1.fastq.gz
+                 r2: ERR315388_2.fastq.gz
+         ERR315389:
+             "1":
+                 r1: ERR315389_1.fastq.gz
+                 r2: ERR315389_2.fastq.gz
+         ERR315390:
+             "1":
+                 r1: ERR315390_1.fastq.gz
+                 r2: ERR315390_2.fastq.gz
+         ERR315391:
+             "1":
+                 r1: ERR315391_1.fastq.gz
+                 r2: ERR315391_2.fastq.gz
+         ERR315392:
+             "1":
+                 r1: ERR315392_1.fastq.gz
+                 r2: ERR315392_2.fastq.gz
+         ERR315393:
+             "1":
+                 r1: ERR315393_1.fastq.gz
+                 r2: ERR315393_2.fastq.gz
+         ERR315394:
+             "1":
+                 r1: ERR315394_1.fastq.gz
+                 r2: ERR315394_2.fastq.gz
+         ERR315395:
+             "1":
+                 r1: ERR315395_1.fastq.gz
+                 r2: ERR315395_2.fastq.gz
+         ERR315396:
+             "1":
+                 r1: ERR315396_1.fastq.gz
+                 r2: ERR315396_2.fastq.gz
+         ERR315397:
+             "1":
+                 r1: ERR315397_1.fastq.gz
+                 r2: ERR315397_2.fastq.gz
+         ERR315398:
+             "1":
+                 r1: ERR315398_1.fastq.gz
+                 r2: ERR315398_2.fastq.gz
+         ERR315399:
+             "1":
+                 r1: ERR315399_1.fastq.gz
+                 r2: ERR315399_2.fastq.gz
+         ERR315400:
+             "1":
+                 r1: ERR315400_1.fastq.gz
+                 r2: ERR315400_2.fastq.gz
+         ERR315401:
+             "1":
+                 r1: ERR315401_1.fastq.gz
+                 r2: ERR315401_2.fastq.gz
+         ERR315402:
+             "1":
+                 r1: ERR315402_1.fastq.gz
+                 r2: ERR315402_2.fastq.gz
+         ERR315403:
+             "1":
+                 r1: ERR315403_1.fastq.gz
+                 r2: ERR315403_2.fastq.gz
+         ERR315404:
+             "1":
+                 r1: ERR315404_1.fastq.gz
+                 r2: ERR315404_2.fastq.gz
+         ERR315405:
+             "1":
+                 r1: ERR315405_1.fastq.gz
+                 r2: ERR315405_2.fastq.gz
+         ERR315406:
+             "1":
+                 r1: ERR315406_1.fastq.gz
+                 r2: ERR315406_2.fastq.gz
+         ERR315407:
+             "1":
+                 r1: ERR315407_1.fastq.gz
+                 r2: ERR315407_2.fastq.gz
+         ERR315408:
+             "1":
+                 r1: ERR315408_1.fastq.gz
+                 r2: ERR315408_2.fastq.gz
+         ERR315409:
+             "1":
+                 r1: ERR315409_1.fastq.gz
+                 r2: ERR315409_2.fastq.gz
+         ERR315410:
+             "1":
+                 r1: ERR315410_1.fastq.gz
+                 r2: ERR315410_2.fastq.gz
+         ERR315411:
+             "1":
+                 r1: ERR315411_1.fastq.gz
+                 r2: ERR315411_2.fastq.gz
+         ERR315412:
+             "1":
+                 r1: ERR315412_1.fastq.gz
+                 r2: ERR315412_2.fastq.gz
+         ERR315413:
+             "1":
+                 r1: ERR315413_1.fastq.gz
+                 r2: ERR315413_2.fastq.gz
+         ERR315414:
+             "1":
+                 r1: ERR315414_1.fastq.gz
+                 r2: ERR315414_2.fastq.gz
+         ERR315415:
+             "1":
+                 r1: ERR315415_1.fastq.gz
+                 r2: ERR315415_2.fastq.gz
+         ERR315416:
+             "1":
+                 r1: ERR315416_1.fastq.gz
+                 r2: ERR315416_2.fastq.gz
+         ERR315417:
+             "1":
+                 r1: ERR315417_1.fastq.gz
+                 r2: ERR315417_2.fastq.gz
+         ERR315418:
+             "1":
+                 r1: ERR315418_1.fastq.gz
+                 r2: ERR315418_2.fastq.gz
+         ERR315419:
+             "1":
+                 r1: ERR315419_1.fastq.gz
+                 r2: ERR315419_2.fastq.gz
+         ERR315420:
+             "1":
+                 r1: ERR315420_1.fastq.gz
+                 r2: ERR315420_2.fastq.gz
+         ERR315421:
+             "1":
+                 r1: ERR315421_1.fastq.gz
+                 r2: ERR315421_2.fastq.gz
+         ERR315422:
+             "1":
+                 r1: ERR315422_1.fastq.gz
+                 r2: ERR315422_2.fastq.gz
+         ERR315423:
+             "1":
+                 r1: ERR315423_1.fastq.gz
+                 r2: ERR315423_2.fastq.gz
+         ERR315424:
+             "1":
+                 r1: ERR315424_1.fastq.gz
+                 r2: ERR315424_2.fastq.gz
+         ERR315425:
+             "1":
+                 r1: ERR315425_1.fastq.gz
+                 r2: ERR315425_2.fastq.gz
+         ERR315426:
+             "1":
+                 r1: ERR315426_1.fastq.gz
+                 r2: ERR315426_2.fastq.gz
+         ERR315427:
+             "1":
+                 r1: ERR315427_1.fastq.gz
+                 r2: ERR315427_2.fastq.gz
+         ERR315428:
+             "1":
+                 r1: ERR315428_1.fastq.gz
+                 r2: ERR315428_2.fastq.gz
+         ERR315429:
+             "1":
+                 r1: ERR315429_1.fastq.gz
+                 r2: ERR315429_2.fastq.gz
+         ERR315430:
+             "1":
+                 r1: ERR315430_1.fastq.gz
+                 r2: ERR315430_2.fastq.gz
+         ERR315431:
+             "1":
+                 r1: ERR315431_1.fastq.gz
+                 r2: ERR315431_2.fastq.gz
+         ERR315432:
+             "1":
+                 r1: ERR315432_1.fastq.gz
+                 r2: ERR315432_2.fastq.gz
+         ERR315433:
+             "1":
+                 r1: ERR315433_1.fastq.gz
+                 r2: ERR315433_2.fastq.gz
+         ERR315434:
+             "1":
+                 r1: ERR315434_1.fastq.gz
+                 r2: ERR315434_2.fastq.gz
+         ERR315435:
+             "1":
+                 r1: ERR315435_1.fastq.gz
+                 r2: ERR315435_2.fastq.gz
+         ERR315436:
+             "1":
+                 r1: ERR315436_1.fastq.gz
+                 r2: ERR315436_2.fastq.gz
+         ERR315437:
+             "1":
+                 r1: ERR315437_1.fastq.gz
+                 r2: ERR315437_2.fastq.gz
+         ERR315438:
+             "1":
+                 r1: ERR315438_1.fastq.gz
+                 r2: ERR315438_2.fastq.gz
+         ERR315439:
+             "1":
+                 r1: ERR315439_1.fastq.gz
+                 r2: ERR315439_2.fastq.gz
+         ERR315440:
+             "1":
+                 r1: ERR315440_1.fastq.gz
+                 r2: ERR315440_2.fastq.gz
+         ERR315441:
+             "1":
+                 r1: ERR315441_1.fastq.gz
+                 r2: ERR315441_2.fastq.gz
+         ERR315442:
+             "1":
+                 r1: ERR315442_1.fastq.gz
+                 r2: ERR315442_2.fastq.gz
+         ERR315443:
+             "1":
+                 r1: ERR315443_1.fastq.gz
+                 r2: ERR315443_2.fastq.gz
+         ERR315444:
+             "1":
+                 r1: ERR315444_1.fastq.gz
+                 r2: ERR315444_2.fastq.gz
+         ERR315445:
+             "1":
+                 r1: ERR315445_1.fastq.gz
+                 r2: ERR315445_2.fastq.gz
+         ERR315446:
+             "1":
+                 r1: ERR315446_1.fastq.gz
+                 r2: ERR315446_2.fastq.gz
+         ERR315447:
+             "1":
+                 r1: ERR315447_1.fastq.gz
+                 r2: ERR315447_2.fastq.gz
+         ERR315448:
+             "1":
+                 r1: ERR315448_1.fastq.gz
+                 r2: ERR315448_2.fastq.gz
+         ERR315449:
+             "1":
+                 r1: ERR315449_1.fastq.gz
+                 r2: ERR315449_2.fastq.gz
+         ERR315450:
+             "1":
+                 r1: ERR315450_1.fastq.gz
+                 r2: ERR315450_2.fastq.gz
+         ERR315451:
+             "1":
+                 r1: ERR315451_1.fastq.gz
+                 r2: ERR315451_2.fastq.gz
+         ERR315452:
+             "1":
+                 r1: ERR315452_1.fastq.gz
+                 r2: ERR315452_2.fastq.gz
+         ERR315453:
+             "1":
+                 r1: ERR315453_1.fastq.gz
+                 r2: ERR315453_2.fastq.gz
+         ERR315454:
+             "1":
+                 r1: ERR315454_1.fastq.gz
+                 r2: ERR315454_2.fastq.gz
+         ERR315455:
+             "1":
+                 r1: ERR315455_1.fastq.gz
+                 r2: ERR315455_2.fastq.gz
+         ERR315456:
+             "1":
+                 r1: ERR315456_1.fastq.gz
+                 r2: ERR315456_2.fastq.gz
+         ERR315457:
+             "1":
+                 r1: ERR315457_1.fastq.gz
+                 r2: ERR315457_2.fastq.gz
+         ERR315458:
+             "1":
+                 r1: ERR315458_1.fastq.gz
+                 r2: ERR315458_2.fastq.gz
+         ERR315459:
+             "1":
+                 r1: ERR315459_1.fastq.gz
+                 r2: ERR315459_2.fastq.gz
+         ERR315460:
+             "1":
+                 r1: ERR315460_1.fastq.gz
+                 r2: ERR315460_2.fastq.gz
+         ERR315461:
+             "1":
+                 r1: ERR315461_1.fastq.gz
+                 r2: ERR315461_2.fastq.gz
+         ERR315462:
+             "1":
+                 r1: ERR315462_1.fastq.gz
+                 r2: ERR315462_2.fastq.gz
+         ERR315463:
+             "1":
+                 r1: ERR315463_1.fastq.gz
+                 r2: ERR315463_2.fastq.gz
+         ERR315464:
+             "1":
+                 r1: ERR315464_1.fastq.gz
+                 r2: ERR315464_2.fastq.gz
+         ERR315465:
+             "1":
+                 r1: ERR315465_1.fastq.gz
+                 r2: ERR315465_2.fastq.gz
+         ERR315466:
+             "1":
+                 r1: ERR315466_1.fastq.gz
+                 r2: ERR315466_2.fastq.gz
+         ERR315467:
+             "1":
+                 r1: ERR315467_1.fastq.gz
+                 r2: ERR315467_2.fastq.gz
+         ERR315468:
+             "1":
+                 r1: ERR315468_1.fastq.gz
+                 r2: ERR315468_2.fastq.gz
+         ERR315469:
+             "1":
+                 r1: ERR315469_1.fastq.gz
+                 r2: ERR315469_2.fastq.gz
+         ERR315470:
+             "1":
+                 r1: ERR315470_1.fastq.gz
+                 r2: ERR315470_2.fastq.gz
+         ERR315471:
+             "1":
+                 r1: ERR315471_1.fastq.gz
+                 r2: ERR315471_2.fastq.gz
+         ERR315472:
+             "1":
+                 r1: ERR315472_1.fastq.gz
+                 r2: ERR315472_2.fastq.gz
+         ERR315473:
+             "1":
+                 r1: ERR315473_1.fastq.gz
+                 r2: ERR315473_2.fastq.gz
+         ERR315474:
+             "1":
+                 r1: ERR315474_1.fastq.gz
+                 r2: ERR315474_2.fastq.gz
+         ERR315475:
+             "1":
+                 r1: ERR315475_1.fastq.gz
+                 r2: ERR315475_2.fastq.gz
+         ERR315476:
+             "1":
+                 r1: ERR315476_1.fastq.gz
+                 r2: ERR315476_2.fastq.gz
+         ERR315477:
+             "1":
+                 r1: ERR315477_1.fastq.gz
+                 r2: ERR315477_2.fastq.gz
+         ERR315478:
+             "1":
+                 r1: ERR315478_1.fastq.gz
+                 r2: ERR315478_2.fastq.gz
+         ERR315479:
+             "1":
+                 r1: ERR315479_1.fastq.gz
+                 r2: ERR315479_2.fastq.gz
+         ERR315480:
+             "1":
+                 r1: ERR315480_1.fastq.gz
+                 r2: ERR315480_2.fastq.gz
+         ERR315481:
+             "1":
+                 r1: ERR315481_1.fastq.gz
+                 r2: ERR315481_2.fastq.gz
+         ERR315482:
+             "1":
+                 r1: ERR315482_1.fastq.gz
+                 r2: ERR315482_2.fastq.gz
+         ERR315483:
+             "1":
+                 r1: ERR315483_1.fastq.gz
+                 r2: ERR315483_2.fastq.gz
+         ERR315484:
+             "1":
+                 r1: ERR315484_1.fastq.gz
+                 r2: ERR315484_2.fastq.gz
+         ERR315485:
+             "1":
+                 r1: ERR315485_1.fastq.gz
+                 r2: ERR315485_2.fastq.gz
+         ERR315486:
+             "1":
+                 r1: ERR315486_1.fastq.gz
+                 r2: ERR315486_2.fastq.gz
+         ERR315487:
+             "1":
+                 r1: ERR315487_1.fastq.gz
+                 r2: ERR315487_2.fastq.gz
+         ERR315488:
+             "1":
+                 r1: ERR315488_1.fastq.gz
+                 r2: ERR315488_2.fastq.gz
+         ERR315489:
+             "1":
+                 r1: ERR315489_1.fastq.gz
+                 r2: ERR315489_2.fastq.gz
+         ERR315490:
+             "1":
+                 r1: ERR315490_1.fastq.gz
+                 r2: ERR315490_2.fastq.gz
+         ERR315491:
+             "1":
+                 r1: ERR315491_1.fastq.gz
+                 r2: ERR315491_2.fastq.gz
+         ERR315492:
+             "1":
+                 r1: ERR315492_1.fastq.gz
+                 r2: ERR315492_2.fastq.gz
+         ERR315493:
+             "1":
+                 r1: ERR315493_1.fastq.gz
+                 r2: ERR315493_2.fastq.gz
+         ERR315494:
+             "1":
+                 r1: ERR315494_1.fastq.gz
+                 r2: ERR315494_2.fastq.gz
+         ERR315495:
+             "1":
+                 r1: ERR315495_1.fastq.gz
+                 r2: ERR315495_2.fastq.gz
+         ERR579122:
+             "1":
+                 r1: ERR579122_1.fastq.gz
+                 r2: ERR579122_2.fastq.gz
+         ERR579123:
+             "1":
+                 r1: ERR579123_1.fastq.gz
+                 r2: ERR579123_2.fastq.gz
+         ERR579124:
+             "1":
+                 r1: ERR579124_1.fastq.gz
+                 r2: ERR579124_2.fastq.gz
+         ERR579125:
+             "1":
+                 r1: ERR579125_1.fastq.gz
+                 r2: ERR579125_2.fastq.gz
+         ERR579127:
+             "1":
+                 r1: ERR579127_1.fastq.gz
+                 r2: ERR579127_2.fastq.gz
+         ERR579128:
+             "1":
+                 r1: ERR579128_1.fastq.gz
+                 r2: ERR579128_2.fastq.gz
+         ERR579129:
+             "1":
+                 r1: ERR579129_1.fastq.gz
+                 r2: ERR579129_2.fastq.gz
+         ERR579130:
+             "1":
+                 r1: ERR579130_1.fastq.gz
+                 r2: ERR579130_2.fastq.gz
+         ERR579131:
+             "1":
+                 r1: ERR579131_1.fastq.gz
+                 r2: ERR579131_2.fastq.gz
+         ERR579132:
+             "1":
+                 r1: ERR579132_1.fastq.gz
+                 r2: ERR579132_2.fastq.gz
+         ERR579133:
+             "1":
+                 r1: ERR579133_1.fastq.gz
+                 r2: ERR579133_2.fastq.gz
+         ERR579134:
+             "1":
+                 r1: ERR579134_1.fastq.gz
+                 r2: ERR579134_2.fastq.gz
+         ERR579135:
+             "1":
+                 r1: ERR579135_1.fastq.gz
+                 r2: ERR579135_2.fastq.gz
+         ERR579136:
+             "1":
+                 r1: ERR579136_1.fastq.gz
+                 r2: ERR579136_2.fastq.gz
+         ERR579138:
+             "1":
+                 r1: ERR579138_1.fastq.gz
+                 r2: ERR579138_2.fastq.gz
+         ERR579139:
+             "1":
+                 r1: ERR579139_1.fastq.gz
+                 r2: ERR579139_2.fastq.gz
+         ERR579140:
+             "1":
+                 r1: ERR579140_1.fastq.gz
+                 r2: ERR579140_2.fastq.gz
+         ERR579141:
+             "1":
+                 r1: ERR579141_1.fastq.gz
+                 r2: ERR579141_2.fastq.gz
+         ERR579142:
+             "1":
+                 r1: ERR579142_1.fastq.gz
+                 r2: ERR579142_2.fastq.gz
+         ERR579143:
+             "1":
+                 r1: ERR579143_1.fastq.gz
+                 r2: ERR579143_2.fastq.gz
+         ERR579146:
+             "1":
+                 r1: ERR579146_1.fastq.gz
+                 r2: ERR579146_2.fastq.gz
+         ERR579147:
+             "1":
+                 r1: ERR579147_1.fastq.gz
+                 r2: ERR579147_2.fastq.gz
+         ERR579148:
+             "1":
+                 r1: ERR579148_1.fastq.gz
+                 r2: ERR579148_2.fastq.gz
+         ERR579149:
+             "1":
+                 r1: ERR579149_1.fastq.gz
+                 r2: ERR579149_2.fastq.gz
+         ERR579150:
+             "1":
+                 r1: ERR579150_1.fastq.gz
+                 r2: ERR579150_2.fastq.gz
+         ERR579151:
+             "1":
+                 r1: ERR579151_1.fastq.gz
+                 r2: ERR579151_2.fastq.gz
+         ERR579152:
+             "1":
+                 r1: ERR579152_1.fastq.gz
+                 r2: ERR579152_2.fastq.gz
+         ERR579153:
+             "1":
+                 r1: ERR579153_1.fastq.gz
+                 r2: ERR579153_2.fastq.gz
+         ERR579155:
+             "1":
+                 r1: ERR579155_1.fastq.gz
+                 r2: ERR579155_2.fastq.gz

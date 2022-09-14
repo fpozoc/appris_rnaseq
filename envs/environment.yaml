@@ -1,0 +1,12 @@
+channels:
+    - http://conda.anaconda.org/tdido
+    - bioconda
+    - conda-forge
+    - defaults
+
+dependencies:
+    - cutadapt
+    - samtools
+    - star=2.6.1d
+    - subread
+    - rsem=1.3.3
