@@ -1,14 +1,12 @@
-# RNA-Seq pipeline
-
-### Table of Contents
-
-**[Pipeline description](#introduction)**<br>
-**[Installation](#installation-instructions)**<br>
-**[Usage](#usage)**<br>
-**[Directory structure](#directory-structure)**<br>
-**[Author information and license](#author-information-and-license)**<br>
-**[Release History](#release-history)**<br>
-**[Contributing](#contributing)**<br>
+# APPRIS RNA-Seq pipeline
+- [APPRIS RNA-Seq pipeline](#appris-rna-seq-pipeline)
+  - [Introduction](#introduction)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Directory structure](#directory-structure)
+  - [Author information and license](#author-information-and-license)
+  - [Release History](#release-history)
+  - [Contributing](#contributing)
 
 ## Introduction
 
